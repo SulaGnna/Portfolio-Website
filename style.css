@@ -1,0 +1,217 @@
+/*General*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{/*to change the */
+    font-family:'Poppins',sans-serif ;
+}
+html{/*to go from one contain to other smoothly*/
+    scroll-behavior: smooth;
+}
+p{
+    color: rgb(85, 85,85);
+}
+/*TRANSITION*/
+/*for all the links and buttons to transition(change) from one style to other*/
+a,.bt{
+    transition: all 300ms ease;
+}
+/*Desktop navigation*/
+/*flex box show the content/name/item etc.. in row we can chnge the size and it,s adjestable accounding to the view*/
+nav,.nav-links{
+    display: flex;
+}
+nav{
+    justify-content: space-around;/* flex container to distribute its child elements along the main axis with equal space around them*/
+    align-items: center;
+    height: 17vh;/*to change the height of the nav*/
+}
+.nav-links{
+    gap:2rem;/*gap btn the elements that are flex*/
+    list-style: none;/*To remove the bullet points*/
+    font-size: 1.5rem;/*To increase the fornt size of the links*/
+
+}
+a{
+    /*style the link elements*/
+     color: black;
+     text-decoration: none;/* decoration added to text, such as underlines, overlines, line-throughs, or none (removing any decoration)*/
+     text-decoration-color: white;
+}
+a:hover{ /*when we scroll over to the link*/
+    color:gray;
+    text-decoration: underline;
+    text-underline-offset:1rem ;/*to have space btn the undrline and text*/
+    text-decoration-color:rgb(181,181,181);
+}
+
+.logo{
+    font-size: 2rem;
+} 
+.logo:hover{
+    cursor: default;
+}
+/*hamburger menu*/
+
+#hamburger-nav{
+    display: none;/*so the in pg/webside this nav will not show*/
+}
+.hamburger-menu{
+    position: relative;
+    display: inline-block;
+}
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;/*"pointer" can also refer to the hand-shaped cursor that appears when hovering over clickable elements like links or buttons*/
+}
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+.menu-links{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow:hidden;
+    transition: all 0.3 ease-in-out;
+}
+.menu-links a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+.menu-links li {
+    list-style: none;/*to remove bullet points*/
+}
+.menu-links.open{/*when use the open class of js*/
+    max-height: 300px;
+}
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg)translate(10px,5px);
+}
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;/*to move the 1st & 2nd line complitely*/
+}
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg)translate(10px,-5px);
+}
+.hamburger-icon span :first-child{
+    transform: none;
+}
+.hamburger-icon span :first-child{
+    opacity:1 ;
+}
+.hamburger-icon span :first-child{
+    transform: none;
+}
+/*sections*/
+section{
+    padding-top: 4vh;/*to have space btn the sections*/
+    height: 96vh;
+    margin: 0 10rem;/*0=top&buttom and 10=sides*/
+    box-sizing: border-box;
+    min-height: fit-content;/*both are for not the section should overlap each other*/
+}
+
+.section-container{
+    display: flex;
+
+}
+/*profile section*/
+#profile{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+.section_pic-container{/*profilepic*/
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+
+}
+.section_text{/*git&linkedin*/
+    align-self: center;
+    text-align: center;
+
+}
+.section_text p{
+    font-weight: 600px; ;
+}
+.section_text_p1{
+    text-align: center;
+}
+.section_text_p2{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+.title{
+    font-size:3rem;
+    text-align: center;
+
+}
+#social-container{
+    display:flex;
+    justify-content: center;
+    margin-top: 1rem; ;
+    gap: 1rem;
+}
+/*ICONS*/
+.icon{
+    cursor:pointer ;
+    height: 2rem;
+}
+
+/*Buttons*/
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.btn{
+    font-weight:600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width:8rem;
+    border-radius: 2rem;
+}
+.btn-color-1:hover,
+.btn-color-2:hover{
+    cursor: pointer;
+}
+.btn-color-1:hover,
+.btn-color-2:hover{
+    background: rgb(53,53,53);
+    color: white;
+}
+.btn-color-1:hover{
+    background:rgb(0,0,0) ;
+}
+.btn-color-2{
+    background: none;
+}
+.btn-color-2:hover{
+    border:rgb(255,255,255) 0.1rem solid;
+}
+.btn-container{
+    gap: 1rem;
+}

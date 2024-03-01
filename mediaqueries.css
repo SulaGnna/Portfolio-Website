@@ -1,0 +1,10 @@
+@media screen and (max-width:1200px){
+    #desktop-nav{
+        display: none;/*its means when the screen size is lower than 1200px the destop nav will disapear*/
+    }/*and when it disapear in that case we want to show thw hamburger-menu*/
+    #hamburger-nav{
+        display:flex;
+    }
+
+
+}

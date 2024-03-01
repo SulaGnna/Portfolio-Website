@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="mediaqueries.css"/>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Sulagnna Mohanty</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#Experience">Experience</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav"><!--the only use of js in thois nav-->
+        <div class="logo">Sulagnna Mohanty</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="togglemenu()">
+                <span></span><!--lines of the hamburgermenu-->
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="togglemenu()">About</a></li><!--onclick:to open and close the links-->
+                <li><a href="#Experience" onclick="togglemenu()">Experience</a></li>
+                <li><a href="#project" onclick="togglemenu()">Project</a></li>
+                <li><a href="#contact" onclick="togglemenu()">Contact</a></li>
+            </div>
+         </div>   
+    </nav>
+    <section id="profile">
+        <div class="section_pic-container">
+            <img src="./assets/profilepic2.png" alt="Sulagnna Mohanty profile picture">
+
+        </div>
+        <div class="section_text">
+            <p class ="Sction_text_p1">Hello, I'm</p>
+            <h1 class="title">Sulagnna Mohanty</h1>
+            <P class="section_text_p2">Frontend Developer</P>
+            <div class="btn-container">
+                <button class="btn bth-color-2"
+                onclick="window.open('.assets/resume.pdf')">Download cv
+            </button>
+            <button class="btn bth-color-1"
+                onclick="location.href='./#contact'">Contact Info
+            </button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/Linkedinlogo2.jpg" alt="My LinkedIn profile"
+                class="icon" onclick="location.href='https://www.linkedin.com/in/sulagnna-mohanty-850071263'">
+
+                <img src="./assets/githublogo.jpg" alt="My Github profile"
+                class="icon" onclick="location.href='https://github.com/SulaGnna'">
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
